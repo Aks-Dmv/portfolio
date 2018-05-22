@@ -1,8 +1,8 @@
-# [[Akshay's](https://github.com/Aks-Dmv) Website]
+# [[Akshay](https://github.com/Aks-Dmv)'s Website]
 
 This Website is a one page HTML theme for [Bootstrap](http://getbootstrap.com/) used as Akshay's accountability measure.
 
-## [Check it out](https://aks-dmv.github.io/portfolio/)
+## [Check it out!](https://aks-dmv.github.io/portfolio/)
 
 
 ## Copyright and License
