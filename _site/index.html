@@ -25,6 +25,8 @@
         background-color: #404040;
     }
 
+
+
     .collapsible:after {
         content: '\002B';
         font-size: 18px;
@@ -34,10 +36,16 @@
         margin-left: 5px;
     }
 
+    .collapsible.active:after{
+        content: "\2212";
+    }
+
+
     .content {
         padding: 0 18px;
-        display: none;
+        max-height: 0;
         overflow: hidden;
+        transition: max-height 0.2s ease-out;
         background-color: #282828;
     }
 
@@ -253,15 +261,15 @@
             var i;
 
             for (i = 0; i < coll.length; i++) {
-                coll[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (content.style.display === "block") {
-                        content.style.display = "none";
-                    } else {
-                        content.style.display = "block";
-                    }
-                });
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                }
+              });
             }
             </script>
 
